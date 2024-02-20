@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background-color: #e6eff6;
+    --background-color-section: #e6eff6;
+    --background-color-green: #2bb3b1;
+    --background-color-green-2: #4abebd;
+    --background-color-button: #bfdf32;
+    --color-title: #47abab;
+    --color-span: #d3e578;
+    --color-text: #d9dde0;
+    --colo-title-2: #eefbfb;
+    --font-family: "Karla", sans-serif;
+}
+
+body{
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    
+}
+
+.section-main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    width: 635px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+.section-community{
+    display: grid;
+    grid-area: 1 / 4 / 1 / 1;
+    background-color: white;
+    padding: 2.5em;
+}
+
+.title-community{
+    padding-bottom: 1em;
+    color: var(--color-title);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.description-decoration{
+    padding-bottom: 0.7em;
+    color: var(--color-span);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.description{
+    line-height: 1.5;
+    color: #bfc2c8;
+}
+
+.section-money{
+    background-color: var(--background-color-green);
+    display: grid;
+    grid-gap: 1.25em;
+    grid-area: 2 / 1 / 2 / 2;
+    padding: 2.5em;
+}
+
+.title{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--colo-title-2);
+}
+
+.value-money{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--colo-title-2);
+}
+
+.value-money-decoration{
+    font-size: 15px;
+    padding-left: 0.8em;
+    color: #6dd8d9;
+}
+
+.value-pass{
+    color: var(--colo-title-2);
+}
+
+.button{
+    background-color: var(--background-color-button);
+    width: 100%;
+    text-decoration: none;
+    color: var(--colo-title-2);
+    text-align: center;
+    padding: 1em 0;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 0.3em;
+}
+
+.section-description{
+    background-color: var(--background-color-green-2);
+    display: grid;
+    grid-area: 2 / 2 / 3 / 3;
+    padding: 2.5em;
+}
+
+.new-section{
+    padding-top: 1em;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+@media only screen and (max-width: 657px){
+    .section-main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 80%;
+    }
+    .section-community{
+        padding: 1.5em;
+    }
+    .section-money{
+        grid-area: 2 / 1 / 3 / 3;
+        padding: 1.5em;
+    }
+    .section-description{
+        grid-area: 3 / 1 / 4 / 4;
+        padding: 1.5em;
+    }
+}
